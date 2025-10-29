@@ -8,6 +8,10 @@ part 'fetch_characters_state.freezed.dart';
 class FetchCharactersState with _$FetchCharactersState {
   factory FetchCharactersState.initial() = _Initial;
   factory FetchCharactersState.loading() = _Loading;
-  factory FetchCharactersState.success(List<Character> characters) = _Success;
+  factory FetchCharactersState.success({
+    required List<Character> characters,
+    required bool hasMore,
+    required int page,
+  }) = _Success;
   factory FetchCharactersState.error(String message) = _Error;
 } 
